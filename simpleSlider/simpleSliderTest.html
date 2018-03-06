@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	body, html {
+		margin: 50px auto;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+
+<div id="pics"><img src="img/01.jpg"></div>
+
+<button id="but3">PREV Slide</button>
+<button id="but4">NEXT Slide</button>
+
+<script>
+/*33333*/
+
+		/*prev*/
+document.getElementById("but3").onclick = function() {
+	if (document.getElementById("pics").innerHTML == '<img src="img/03.jpg">') {
+		document.getElementById("pics").innerHTML = '<img src="img/02.jpg">';
+	}
+	else if (document.getElementById("pics").innerHTML == '<img src="img/02.jpg">') {
+			 document.getElementById("pics").innerHTML = '<img src="img/01.jpg">';
+	}
+	else {
+		document.getElementById("pics").innerHTML = '<img src="img/03.jpg">';
+	}
+}
+		/*next*/
+document.getElementById("but4").onclick = function() {
+	if (document.getElementById("pics").innerHTML == '<img src="img/01.jpg">') {
+		document.getElementById("pics").innerHTML = '<img src="img/02.jpg">';
+	}
+	else if (document.getElementById("pics").innerHTML == '<img src="img/02.jpg">') {
+			 document.getElementById("pics").innerHTML = '<img src="img/03.jpg">';
+	}
+	else {
+		document.getElementById("pics").innerHTML = '<img src="img/01.jpg">';
+	}
+}
+
+
+</script>
+
+</body>
+</html>
